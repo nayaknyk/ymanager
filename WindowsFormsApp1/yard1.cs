@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
         private void button11_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 11;
+            int row = 1;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -122,7 +122,7 @@ namespace WindowsFormsApp1
         private void button12_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 12;
+            int row = 2;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -131,7 +131,7 @@ namespace WindowsFormsApp1
         private void button13_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 13;
+            int row = 3;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
         private void button14_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 14;
+            int row = 4;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
         private void button15_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 15;
+            int row = 5;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -158,7 +158,7 @@ namespace WindowsFormsApp1
         private void button16_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 16;
+            int row = 6;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -167,7 +167,7 @@ namespace WindowsFormsApp1
         private void button17_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 17;
+            int row = 7;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -176,7 +176,7 @@ namespace WindowsFormsApp1
         private void button18_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 18;
+            int row = 8;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -185,7 +185,7 @@ namespace WindowsFormsApp1
         private void button19_Click(object sender, EventArgs e)
         {
             char col = 'B';
-            int row = 19;
+            int row = 9;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -194,7 +194,7 @@ namespace WindowsFormsApp1
         private void button20_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 20;
+            int row = 10;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -203,7 +203,7 @@ namespace WindowsFormsApp1
         private void button21_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 21;
+            int row = 1;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -212,7 +212,7 @@ namespace WindowsFormsApp1
         private void button22_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 22;
+            int row = 2;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -221,7 +221,7 @@ namespace WindowsFormsApp1
         private void button23_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 23;
+            int row = 3;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -230,7 +230,7 @@ namespace WindowsFormsApp1
         private void button24_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 24;
+            int row = 4;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -239,7 +239,7 @@ namespace WindowsFormsApp1
         private void button25_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 25;
+            int row = 5;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -248,7 +248,7 @@ namespace WindowsFormsApp1
         private void button26_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 26;
+            int row = 6;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -257,7 +257,7 @@ namespace WindowsFormsApp1
         private void button27_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 27;
+            int row = 7;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -266,7 +266,7 @@ namespace WindowsFormsApp1
         private void button28_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 28;
+            int row = 8;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -275,7 +275,7 @@ namespace WindowsFormsApp1
         private void button29_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 29;
+            int row = 9;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
@@ -284,10 +284,15 @@ namespace WindowsFormsApp1
         private void button30_Click(object sender, EventArgs e)
         {
             char col = 'C';
-            int row = 30;
+            int row = 10;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
+        }
+
+        private void yard5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

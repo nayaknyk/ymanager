@@ -114,6 +114,9 @@
     <EmbeddedResource Include="yard1.resx">
       <DependentUpon>yard1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="yard4.resx">
+      <DependentUpon>yard4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="yard5.resx">
       <DependentUpon>yard5.cs</DependentUpon>
     </EmbeddedResource>
