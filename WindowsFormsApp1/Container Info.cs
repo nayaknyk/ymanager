@@ -67,5 +67,17 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((yard.Equals("IMPORT,LADEN") || yard.Equals("EXIM,LADEN-1") || yard.Equals("EXIM,LADEN-2") || yard.Equals("EXIM,COASTAL")) && (this.radioButton4.Checked == true))
+                MessageBox.Show("Can stack only 3 laden containers");
+                this.radioButton4.Checked = false;
+        }
     }
 }

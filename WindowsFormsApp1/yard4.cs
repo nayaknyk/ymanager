@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        string yard = "IMPORT, LADEN";
+        string yard = "IMPORT,LADEN";
         private void button1_Click(object sender, EventArgs e)
         {
             char col = 'A';
@@ -820,6 +820,14 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
+        private void button59_Click(object sender, EventArgs e)
+        {
+            char col = 'F';
+            int row = 15;
+            container c = new container(yard, col, row);
+            this.Hide();
+            c.ShowDialog();
+        }
     }
 
 }

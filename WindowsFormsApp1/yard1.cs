@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        String yard = "EXIM, EMPTY";
+        string yard = "EXIM,EMPTY";
 
         private void button1_Click(object sender, EventArgs e)
         {

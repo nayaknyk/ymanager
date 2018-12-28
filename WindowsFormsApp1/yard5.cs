@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         }
 
-        string yard = "IMPORT, EMPTY";
+        string yard = "IMPORT,EMPTY";
         private void button1_Click(object sender, EventArgs e)
         {
             char col = 'A';

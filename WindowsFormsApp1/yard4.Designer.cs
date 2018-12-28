@@ -139,6 +139,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -623,7 +625,6 @@
             this.button3.TabIndex = 146;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
-         
             // 
             // button2
             // 
@@ -783,6 +784,7 @@
             this.button59.TabIndex = 220;
             this.button59.Text = "90";
             this.button59.UseVisualStyleBackColor = true;
+            this.button59.Click += new System.EventHandler(this.button59_Click);
             // 
             // button60
             // 
@@ -1229,11 +1231,32 @@
             this.label21.TabIndex = 234;
             this.label21.Text = "1";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(13, 516);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(62, 20);
+            this.label22.TabIndex = 249;
+            this.label22.Text = "Yard 4";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(30, 552);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(92, 13);
+            this.label23.TabIndex = 250;
+            this.label23.Text = "Container Count:  ";
+            // 
             // yard4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 654);
+            this.ClientSize = new System.Drawing.Size(788, 586);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -1347,7 +1370,6 @@
             this.Controls.Add(this.label1);
             this.Name = "yard4";
             this.Text = "Yard 4: Import, Laden";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1466,5 +1488,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }
