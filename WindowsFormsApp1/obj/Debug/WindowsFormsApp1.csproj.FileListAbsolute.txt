@@ -10,3 +10,16 @@ c:\users\nikhil\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Windows
 c:\users\nikhil\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\nikhil\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.container.resources
 C:\Users\nikhil\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.yard1.resources
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.container.resources
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.yard5.resources
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.yard1.resources
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\nikhil\Documents\github\nayaknyk\ymanager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

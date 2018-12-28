@@ -74,18 +74,18 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(15, 354);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.Size = new System.Drawing.Size(87, 13);
             this.label9.TabIndex = 14;
-            this.label9.Text = "Import Yards: *";
+            this.label9.Text = "Import Yards: 5,6";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(15, 379);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 13);
+            this.label10.Size = new System.Drawing.Size(141, 13);
             this.label10.TabIndex = 15;
-            this.label10.Text = "Export Yards: *";
+            this.label10.Text = "Export Yards: 2,3,6 (Coastal)";
             // 
             // dataGridView1
             // 
@@ -107,20 +107,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(422, 206);
+            this.label7.Location = new System.Drawing.Point(429, 206);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 12;
-            this.label7.Text = "8x4 *";
+            this.label7.Text = "8x3";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(345, 295);
+            this.label6.Location = new System.Drawing.Point(352, 295);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "30x4 *";
+            this.label6.Text = "30x4";
             // 
             // label5
             // 
@@ -156,7 +156,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "45x3";
+            this.label2.Text = "45x4";
             // 
             // button5
             // 

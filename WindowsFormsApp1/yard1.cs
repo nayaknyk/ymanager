@@ -10,18 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class yard1 : Form
+    public partial class yard5 : Form
     {
-        String yard = "IMPORT, EMPTY";
-        public yard1()
+        public yard5()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        String yard = "EXIM, EMPTY";
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -116,7 +112,7 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
-            char col = 'A';
+            char col = 'B';
             int row = 11;
             container c = new container(yard, col, row);
             this.Hide();
@@ -125,7 +121,7 @@ namespace WindowsFormsApp1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            char col = 'A';
+            char col = 'B';
             int row = 12;
             container c = new container(yard, col, row);
             this.Hide();
@@ -134,25 +130,25 @@ namespace WindowsFormsApp1
 
         private void button13_Click(object sender, EventArgs e)
         {
-            char col = 'A';
-            int row =13;
-            container c = new container(yard, col,row);
+            char col = 'B';
+            int row = 13;
+            container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            char col = 'A';
+            char col = 'B';
             int row = 14;
-            container c = new container(yard, col,row);
+            container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            char col = 'A';
+            char col = 'B';
             int row = 15;
             container c = new container(yard, col, row);
             this.Hide();
@@ -197,7 +193,7 @@ namespace WindowsFormsApp1
 
         private void button20_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 20;
             container c = new container(yard, col, row);
             this.Hide();
@@ -206,7 +202,7 @@ namespace WindowsFormsApp1
 
         private void button21_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 21;
             container c = new container(yard, col, row);
             this.Hide();
@@ -215,7 +211,7 @@ namespace WindowsFormsApp1
 
         private void button22_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 22;
             container c = new container(yard, col, row);
             this.Hide();
@@ -224,7 +220,7 @@ namespace WindowsFormsApp1
 
         private void button23_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 23;
             container c = new container(yard, col, row);
             this.Hide();
@@ -233,7 +229,7 @@ namespace WindowsFormsApp1
 
         private void button24_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 24;
             container c = new container(yard, col, row);
             this.Hide();
@@ -242,7 +238,7 @@ namespace WindowsFormsApp1
 
         private void button25_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 25;
             container c = new container(yard, col, row);
             this.Hide();
@@ -251,7 +247,7 @@ namespace WindowsFormsApp1
 
         private void button26_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 26;
             container c = new container(yard, col, row);
             this.Hide();
@@ -260,7 +256,7 @@ namespace WindowsFormsApp1
 
         private void button27_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 27;
             container c = new container(yard, col, row);
             this.Hide();
@@ -269,7 +265,7 @@ namespace WindowsFormsApp1
 
         private void button28_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 28;
             container c = new container(yard, col, row);
             this.Hide();
@@ -278,7 +274,7 @@ namespace WindowsFormsApp1
 
         private void button29_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 29;
             container c = new container(yard, col, row);
             this.Hide();
@@ -287,134 +283,8 @@ namespace WindowsFormsApp1
 
         private void button30_Click(object sender, EventArgs e)
         {
-            char col = 'B';
+            char col = 'C';
             int row = 30;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button31_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 31;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button32_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 32;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button33_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 33;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button34_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 34;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button35_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 35;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button36_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 36;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button37_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 37;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button38_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 38;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button39_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 39;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button40_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 40;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button41_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 41;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button42_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 42;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button43_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 43;
-            container c = new container(yard, col, row);
-            this.Hide();
-            c.ShowDialog();
-        }
-
-        private void button44_Click(object sender, EventArgs e)
-        {
-            char col = 'C';
-            int row = 44;
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();

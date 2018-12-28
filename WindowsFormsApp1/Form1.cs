@@ -20,8 +20,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            yard1 y1 = new yard1();
-            y1.ShowDialog();
+            yard5 y5 = new yard5();
+            y5.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,8 +44,8 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            yard5 y5 = new yard5();
-            y5.ShowDialog();
+            yard1 y1 = new yard1();
+            y1.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
