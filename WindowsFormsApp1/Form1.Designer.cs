@@ -76,16 +76,16 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 13);
             this.label9.TabIndex = 14;
-            this.label9.Text = "Import Yards: 5,6";
+            this.label9.Text = "Import Yards: 4,5";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(15, 379);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 13);
+            this.label10.Size = new System.Drawing.Size(150, 13);
             this.label10.TabIndex = 15;
-            this.label10.Text = "Export Yards: 2,3,6 (Coastal)";
+            this.label10.Text = "Export Yards: 1,2,3,6 (Coastal)";
             // 
             // dataGridView1
             // 

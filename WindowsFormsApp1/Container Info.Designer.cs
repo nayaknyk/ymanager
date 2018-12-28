@@ -65,7 +65,7 @@
             this.label1.Size = new System.Drawing.Size(161, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Edit Container Info";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // label2
             // 
@@ -77,7 +77,7 @@
             this.label2.Size = new System.Drawing.Size(128, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Container Address:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+    
             // 
             // label3
             // 
@@ -89,7 +89,7 @@
             this.label3.Size = new System.Drawing.Size(124, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Container Number";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+         
             // 
             // label4
             // 
@@ -154,7 +154,7 @@
             this.label9.Size = new System.Drawing.Size(59, 15);
             this.label9.TabIndex = 8;
             this.label9.Text = "Column:  ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+       
             // 
             // label10
             // 
@@ -164,7 +164,7 @@
             this.label10.Size = new System.Drawing.Size(41, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "Row:  ";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+
             // 
             // textBox1
             // 
@@ -234,7 +234,7 @@
             this.label11.Size = new System.Drawing.Size(41, 15);
             this.label11.TabIndex = 18;
             this.label11.Text = "Yard:  ";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+    
             // 
             // label12
             // 
@@ -256,7 +256,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "1";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+ 
             // 
             // radioButton2
             // 
@@ -335,7 +335,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "container";
             this.Text = "Container Info";
-            this.Load += new System.EventHandler(this.container_Load);
+   
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

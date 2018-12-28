@@ -35,44 +35,6 @@ namespace WindowsFormsApp1
             label10.Text = sb1.ToString();
         }
 
-        private void container_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       private void label9_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             if ((yard.Equals("IMPORT,LADEN") || yard.Equals("EXIM,LADEN-1") || yard.Equals("EXIM,LADEN-2") || yard.Equals("EXIM,COASTAL")) && (this.radioButton4.Checked == true))
