@@ -81,5 +81,18 @@ namespace WindowsFormsApp1
                 this.radioButton4.Checked = false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int position;
+            if (this.radioButton1.Checked == true)
+                position = 1;
+            else if (this.radioButton2.Checked == true)
+                position = 2;
+            else if (this.radioButton3.Checked == true)
+                position = 3;
+            else
+                position = 4;
+        }
     }
 }
