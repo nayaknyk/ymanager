@@ -1370,7 +1370,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "yard3";
-            this.Text = "Yard 3: EXIM, Laden";
+            this.Text = "Yard 3: EXIM, Laden-1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

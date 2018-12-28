@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        string yard = "EXIM,LADEN";
+        string yard = "EXIM,LADEN-1";
         private void button1_Click(object sender, EventArgs e)
         {
             char col = 'A';
