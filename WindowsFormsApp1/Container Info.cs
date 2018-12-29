@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlServerCe;
 
 namespace WindowsFormsApp1
 {
@@ -15,12 +16,14 @@ namespace WindowsFormsApp1
         char col;
         int row;
         string yard;
-        public container(string yard1, char col1, int row1)
+        int yardid;
+        public container(string yard1, char col1, int row1,int yardid1)
         {
             InitializeComponent();
             col = col1;
             row = row1;
             yard = yard1;
+            yardid = yardid1;
 
             StringBuilder sb2 = new StringBuilder(label11.Text);
             sb2.Append(yard.ToString());
@@ -37,10 +40,10 @@ namespace WindowsFormsApp1
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            if ((yard.Equals("IMPORT,LADEN") || yard.Equals("EXIM,LADEN-1") || yard.Equals("EXIM,LADEN-2") || yard.Equals("EXIM,COASTAL")) && (this.radioButton4.Checked == true))
+            if ((yardid==2||yardid==4||yardid==6)&&(radioButton4.Checked == true))
             {
                 MessageBox.Show("Can stack only 3 laden containers");
-                this.radioButton4.Checked = false;
+                radioButton4.Checked = false;
             }
         }
 
@@ -55,6 +58,22 @@ namespace WindowsFormsApp1
                 position = 3;
             else
                 position = 4;
+
+
+            
+            try
+            {
+                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                conn.Open();
+                SqlCeCommand cmd = conn.CreateCommand();
+                cmd.CommandText="insert into container values('" + textBox1.Text + "','" + yardid.ToString() + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox6.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + col + "','" + row.ToString() + "','" + position.ToString() + "')";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

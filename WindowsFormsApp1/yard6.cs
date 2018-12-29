@@ -18,11 +18,12 @@ namespace WindowsFormsApp1
         }
 
         string yard = "EXIM,COASTAL";
+        int yardid = 6;
         private void button1_Click(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 1;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -31,7 +32,7 @@ namespace WindowsFormsApp1
         {
             char col = 'A';
             int row = 2;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
 
@@ -41,7 +42,7 @@ namespace WindowsFormsApp1
         {
             char col = 'A';
             int row = 3;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
 
@@ -51,7 +52,7 @@ namespace WindowsFormsApp1
         {
             char col = 'A';
             int row = 4;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -60,7 +61,7 @@ namespace WindowsFormsApp1
         {
             char col = 'B';
             int row = 1;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -69,7 +70,7 @@ namespace WindowsFormsApp1
         {
             char col = 'B';
             int row = 2;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -78,7 +79,7 @@ namespace WindowsFormsApp1
         {
             char col = 'B';
             int row = 3;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -87,7 +88,7 @@ namespace WindowsFormsApp1
         {
             char col = 'B';
             int row = 4;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -96,7 +97,7 @@ namespace WindowsFormsApp1
         {
             char col = 'C';
             int row = 1;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -105,7 +106,7 @@ namespace WindowsFormsApp1
         {
             char col = 'C';
             int row = 2;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -114,7 +115,7 @@ namespace WindowsFormsApp1
         {
             char col = 'C';
             int row = 3;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -123,7 +124,7 @@ namespace WindowsFormsApp1
         {
             char col = 'C';
             int row = 4;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -132,7 +133,7 @@ namespace WindowsFormsApp1
         {
             char col = 'D';
             int row = 1;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -141,7 +142,7 @@ namespace WindowsFormsApp1
         {
             char col = 'D';
             int row = 2;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -150,7 +151,7 @@ namespace WindowsFormsApp1
         {
             char col = 'D';
             int row = 3;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }
@@ -159,7 +160,7 @@ namespace WindowsFormsApp1
         {
             char col = 'D';
             int row = 4;
-            container c = new container(yard, col, row);
+            container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
         }

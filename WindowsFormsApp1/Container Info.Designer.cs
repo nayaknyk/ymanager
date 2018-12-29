@@ -65,7 +65,6 @@
             this.label1.Size = new System.Drawing.Size(161, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Edit Container Info";
-
             // 
             // label2
             // 
@@ -77,7 +76,6 @@
             this.label2.Size = new System.Drawing.Size(128, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Container Address:";
-    
             // 
             // label3
             // 
@@ -89,7 +87,6 @@
             this.label3.Size = new System.Drawing.Size(124, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Container Number";
-         
             // 
             // label4
             // 
@@ -154,7 +151,6 @@
             this.label9.Size = new System.Drawing.Size(59, 15);
             this.label9.TabIndex = 8;
             this.label9.Text = "Column:  ";
-       
             // 
             // label10
             // 
@@ -164,7 +160,6 @@
             this.label10.Size = new System.Drawing.Size(41, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "Row:  ";
-
             // 
             // textBox1
             // 
@@ -234,7 +229,6 @@
             this.label11.Size = new System.Drawing.Size(41, 15);
             this.label11.TabIndex = 18;
             this.label11.Text = "Yard:  ";
-    
             // 
             // label12
             // 
@@ -256,7 +250,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "1";
             this.radioButton1.UseVisualStyleBackColor = true;
- 
             // 
             // radioButton2
             // 
@@ -306,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 549);
+            this.ClientSize = new System.Drawing.Size(516, 548);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -335,7 +328,6 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "container";
             this.Text = "Container Info";
-   
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
