@@ -26,3 +26,6 @@ https://www.thaicreate.com/asp.net/c-sharp-asp.net-excel-epplus-read-excel.html
 
 !! Local SQL db file:
 https://www.c-sharpcorner.com/UploadFile/7d3362/use-local-database-file-in-window-application-C-Sharp/
+
+!! DB toolbox and connectors for sdf:
+http://www.sokhawin.com/how-to-open-sql-compact-edition-file-sdf-in-visual-studio-or-linqpad/
