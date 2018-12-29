@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 2;
@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 3;
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 4;
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 5;
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 6;
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 7;
@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button8_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 8;
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button9_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 9;
@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button10_Click_1(object sender, EventArgs e)
         {
             char col = 'A';
             int row = 10;
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button11_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 1;
@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button12_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 2;
@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void button13_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 3;
@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void button14_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 4;
@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button15_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 5;
@@ -155,7 +155,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button16_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 6;
@@ -164,7 +164,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void button17_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 7;
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void button18_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 8;
@@ -182,7 +182,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void button19_Click_1(object sender, EventArgs e)
         {
             char col = 'B';
             int row = 9;
@@ -191,7 +191,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void button20_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 10;
@@ -200,7 +200,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button21_Click(object sender, EventArgs e)
+        private void button21_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 1;
@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button22_Click(object sender, EventArgs e)
+        private void button22_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 2;
@@ -218,7 +218,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button23_Click(object sender, EventArgs e)
+        private void button23_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 3;
@@ -227,7 +227,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button24_Click(object sender, EventArgs e)
+        private void button24_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 4;
@@ -236,7 +236,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button25_Click(object sender, EventArgs e)
+        private void button25_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 5;
@@ -245,7 +245,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button26_Click(object sender, EventArgs e)
+        private void button26_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 6;
@@ -254,7 +254,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button27_Click(object sender, EventArgs e)
+        private void button27_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 7;
@@ -263,7 +263,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button28_Click(object sender, EventArgs e)
+        private void button28_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 8;
@@ -272,7 +272,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button29_Click(object sender, EventArgs e)
+        private void button29_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 9;
@@ -281,7 +281,7 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button30_Click(object sender, EventArgs e)
+        private void button30_Click_1(object sender, EventArgs e)
         {
             char col = 'C';
             int row = 10;

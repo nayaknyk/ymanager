@@ -16,8 +16,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        string yard = "EXIM,LADEN-2";
 
+        string yard = "EXIM,LADEN-2";
         private void button1_Click(object sender, EventArgs e)
         {
             char col = 'A';
@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
             container c = new container(yard, col, row);
             this.Hide();
             c.ShowDialog();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
