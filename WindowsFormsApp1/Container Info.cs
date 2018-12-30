@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "update container where containerid='" + textBox1.Text + "', yardnum='" + yardid.ToString() + "', vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "', col='" + col + "', position='" + position.ToString() + "', rowid='" + row.ToString() + "' ";
+                cmd.CommandText = "update container set containerid='" + textBox1.Text + "', yardnum='" + yardid.ToString() + "', vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "', col='" + col + "', position='" + position.ToString() + "', rowid='" + row.ToString() + "' ";
                 cmd.ExecuteNonQuery();
                 label14.Text = "Stack updated successfully!";
 
