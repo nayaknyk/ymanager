@@ -36,6 +36,26 @@ namespace WindowsFormsApp1
             StringBuilder sb1 = new StringBuilder(label10.Text);
             sb1.Append(row.ToString());
             label10.Text = sb1.ToString();
+
+            label14.Text = " ";
+
+            try
+            {
+                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                conn.Open();
+                SqlCeCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from container where yardnum='"+yardid+"' and col='"+col+"' and rowid='"+row+"'";
+                cmd.ExecuteNonQuery();
+                SqlCeDataAdapter sd = new SqlCeDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -58,19 +78,50 @@ namespace WindowsFormsApp1
                 position = 3;
             else
                 position = 4;
-
-
             
             try
             {
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
-                cmd.CommandText="insert into container values('" + textBox1.Text + "','" + yardid.ToString() + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox6.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + col + "','" + row.ToString() + "','" + position.ToString() + "')";
+                cmd.CommandText="insert into container values('" + textBox1.Text + "','" + yardid.ToString() + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox6.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + col + "','" + position.ToString() + "','" + row.ToString() + "')";
                 cmd.ExecuteNonQuery();
+                label14.Text = "Container added successfully!";
+
+                cmd.CommandText = "select * from container where yardnum='" + yardid + "' and col='" + col + "' and rowid='" + row + "'";
+                cmd.ExecuteNonQuery();
+                SqlCeDataAdapter sd = new SqlCeDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                dataGridView1.DataSource = dt;
                 conn.Close();
             }
             catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                conn.Open();
+                SqlCeCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "delete from container where containerid='"+textBox1.Text+"'";
+                cmd.ExecuteNonQuery();
+                label14.Text = "Container deleted successfully!";
+
+                cmd.CommandText = "select * from container where yardnum='" + yardid + "' and col='" + col + "' and rowid='" + row + "'";
+                cmd.ExecuteNonQuery();
+                SqlCeDataAdapter sd = new SqlCeDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

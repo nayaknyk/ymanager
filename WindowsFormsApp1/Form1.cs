@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Data.SqlServerCe;
 
 namespace WindowsFormsApp1
 {
@@ -52,6 +53,33 @@ namespace WindowsFormsApp1
         {
             yard6 y6 = new yard6();
             y6.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string s = textBox1.Text;
+            if (s.Length>11)
+            {
+                MessageBox.Show("Invalid Container number");
+                textBox1.Clear();
+            }
+            try
+            {
+                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                conn.Open();
+                SqlCeCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select containerid,yardnum,col,rowid,position from container where containerid='"+s+"'";
+                cmd.ExecuteNonQuery();
+                SqlCeDataAdapter sd = new SqlCeDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

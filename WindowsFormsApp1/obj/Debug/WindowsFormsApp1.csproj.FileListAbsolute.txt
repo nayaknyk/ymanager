@@ -45,11 +45,6 @@ C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\obj\Debug\WindowsForm
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\EntityFramework.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServerCompact.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\ISqlCeScripting.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\QuickGraph.Data.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\QuickGraph.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\QuickGraph.Graphviz.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\SqlCeScripting40.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\System.Data.SqlServerCe.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\EntityFramework.xml
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
