@@ -69,16 +69,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int position;
-            if (this.radioButton1.Checked == true)
-                position = 1;
-            else if (this.radioButton2.Checked == true)
-                position = 2;
-            else if (this.radioButton3.Checked == true)
-                position = 3;
-            else
-                position = 4;
-            
+            int position = getpos();
             try
             {
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
@@ -125,6 +116,46 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int position = getpos();
+                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                conn.Open();
+                SqlCeCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "update container where containerid='" + textBox1.Text + "', yardnum='" + yardid.ToString() + "', vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "', col='" + col + "', position='" + position.ToString() + "', rowid='" + row.ToString() + "' ";
+                cmd.ExecuteNonQuery();
+                label14.Text = "Stack updated successfully!";
+
+                cmd.CommandText = "select * from container where yardnum='" + yardid + "' and col='" + col + "' and rowid='" + row + "'";
+                cmd.ExecuteNonQuery();
+                SqlCeDataAdapter sd = new SqlCeDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private int getpos()
+        {
+            int position;
+            if (radioButton1.Checked == true)
+                position = 1;
+            else if (radioButton2.Checked == true)
+                position = 2;
+            else if (radioButton3.Checked == true)
+                position = 3;
+            else
+                position = 4;
+            return position;
         }
     }
 }
