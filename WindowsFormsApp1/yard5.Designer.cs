@@ -799,6 +799,7 @@
             this.Controls.Add(this.button1);
             this.Name = "yard1";
             this.Text = "Yard 5: Import, Empty";
+            this.Load += new System.EventHandler(this.yard1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

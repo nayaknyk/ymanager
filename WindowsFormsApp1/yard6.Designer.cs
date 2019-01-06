@@ -340,6 +340,7 @@
             this.Controls.Add(this.label3);
             this.Name = "yard6";
             this.Text = "Yard 6: EXIM, Coastal (Laden)";
+            this.Load += new System.EventHandler(this.yard6_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

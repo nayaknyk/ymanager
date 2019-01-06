@@ -157,5 +157,10 @@ namespace WindowsFormsApp1
                 position = 4;
             return position;
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

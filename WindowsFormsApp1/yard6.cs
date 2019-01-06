@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlServerCe;
 
 namespace WindowsFormsApp1
 {
@@ -163,6 +164,22 @@ namespace WindowsFormsApp1
             container c = new container(yard, col, row, yardid);
             this.Hide();
             c.ShowDialog();
+        }
+
+        private void yard6_Load(object sender, EventArgs e)
+        {
+            SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+            conn.Open();
+            SqlCeCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select count(*) from container where yardnum=6";
+            SqlCeDataReader rd = cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                String count = rd[0].ToString();
+                StringBuilder sb2 = new StringBuilder(label6.Text);
+                sb2.Append(count);
+                label6.Text = sb2.ToString();
+            }
         }
     }
 }

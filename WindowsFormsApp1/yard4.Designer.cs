@@ -1370,6 +1370,7 @@
             this.Controls.Add(this.label1);
             this.Name = "yard4";
             this.Text = "Yard 4: Import, Laden";
+            this.Load += new System.EventHandler(this.yard4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

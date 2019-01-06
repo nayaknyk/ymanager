@@ -306,6 +306,7 @@
             this.label14.Size = new System.Drawing.Size(10, 15);
             this.label14.TabIndex = 25;
             this.label14.Text = " ";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // button2
             // 

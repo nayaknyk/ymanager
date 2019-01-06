@@ -1335,6 +1335,7 @@
             this.Controls.Add(this.label1);
             this.Name = "yard2";
             this.Text = "Yard 2: EXIM, Laden-2";
+            this.Load += new System.EventHandler(this.yard2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
