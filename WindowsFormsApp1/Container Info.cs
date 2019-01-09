@@ -58,20 +58,15 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            if ((yardid==2||yardid==4||yardid==6)&&(radioButton4.Checked == true))
-            {
-                MessageBox.Show("Can stack only 3 laden containers");
-                radioButton4.Checked = false;
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            int position = getpos();
+        {                
             try
             {
+                int position=0;
+                while(position==0)
+                { position = getpos(yardid); }
+
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
@@ -120,23 +115,34 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            bool flag = true;
             try
             {
-                int position = getpos();
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "update container set containerid='" + textBox1.Text + "', yardnum='" + yardid.ToString() + "', vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "', col='" + col + "', position='" + position.ToString() + "', rowid='" + row.ToString() + "' ";
-                cmd.ExecuteNonQuery();
-                label14.Text = "Stack updated successfully!";
+                cmd.CommandText = "select count(position) from container where containerid='" + textBox1.Text + "'";
+                SqlCeDataReader rd = cmd.ExecuteReader();
+                if(rd.Read())
+                { if ((int)rd[0]==0)
+                    MessageBox.Show("Container does not exist");
+                    flag = false;
+                }
 
-                cmd.CommandText = "select * from container where yardnum='" + yardid + "' and col='" + col + "' and rowid='" + row + "'";
-                cmd.ExecuteNonQuery();
-                SqlCeDataAdapter sd = new SqlCeDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sd.Fill(dt);
-                dataGridView1.DataSource = dt;
-                conn.Close();
+                if (flag == true)
+                {
+                    cmd.CommandText = "update container set containerid='" + textBox1.Text + "', yardnum='" + yardid.ToString() + "', vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "', col='" + col + "', rowid='" + row.ToString() + "' ";
+                    cmd.ExecuteNonQuery();
+                    label14.Text = "Stack updated successfully!";
+
+                    cmd.CommandText = "select * from container where yardnum='" + yardid + "' and col='" + col + "' and rowid='" + row + "'";
+                    cmd.ExecuteNonQuery();
+                    SqlCeDataAdapter sd = new SqlCeDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    sd.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -144,23 +150,28 @@ namespace WindowsFormsApp1
             }
         }
 
-        private int getpos()
+        private int getpos(int yardid)
         {
-            int position;
-            if (radioButton1.Checked == true)
-                position = 1;
-            else if (radioButton2.Checked == true)
-                position = 2;
-            else if (radioButton3.Checked == true)
-                position = 3;
+            int position, max, count;
+            if (yardid == 2 || yardid == 3 || yardid == 4 || yardid == 6)
+                max = 3;
+            else max = 4;
+
+            SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+            conn.Open();
+            SqlCeCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select count(*) from container where yardnum='" + yardid + "' and col='"+col+"' and rowid='"+row+"'";
+            SqlCeDataReader rd = cmd.ExecuteReader();
+            count = (int)rd[0];
+            conn.Close();
+            if (count < max)
+                position = count++;
             else
-                position = 4;
-            return position;
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
+            {
+                MessageBox.Show("Cannot stack more containers, please place container in another slot");
+                position = 0;
+            }
+                return position;
         }
     }
 }

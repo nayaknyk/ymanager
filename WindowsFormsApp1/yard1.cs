@@ -306,6 +306,7 @@ namespace WindowsFormsApp1
                 sb2.Append(count);
                 label5.Text = sb2.ToString();
             }
+            conn.Close();
         }
     }
 }

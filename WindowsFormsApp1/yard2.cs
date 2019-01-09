@@ -818,6 +818,7 @@ namespace WindowsFormsApp1
                 sb2.Append(count);
                 label23.Text = sb2.ToString();
             }
+            conn.Close();
         }
     }
 }
