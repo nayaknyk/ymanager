@@ -806,7 +806,7 @@ namespace WindowsFormsApp1
 
         private void yard2_Load(object sender, EventArgs e)
         {
-            SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+            SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
             conn.Open();
             SqlCeCommand cmd = conn.CreateCommand();
             cmd.CommandText = "select count(*) from container where yardnum=2";

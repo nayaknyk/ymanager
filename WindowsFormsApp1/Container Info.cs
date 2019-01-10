@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
 
             try
             {
-                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "select * from container where yardnum='"+yardid+"' and col='"+col+"' and rowid='"+row+"'";
@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
                 if (position == 0)
                     return;
 
-                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
                 cmd.CommandText="insert into container values('" + textBox1.Text + "','" + yardid.ToString() + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox6.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + col + "','" + position.ToString() + "','" + row.ToString() + "')";
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
             bool flag = true;
             try
             {
-                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "select count(position) from container where containerid='" + textBox1.Text + "'";
@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
             bool flag = true;
             try
             {
-                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "select count(position) from container where containerid='" + textBox1.Text + "'";
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
                 max = 3;
             else max = 4;
 
-            SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+            SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
             conn.Open();
             SqlCeCommand cmd = conn.CreateCommand();
             cmd.CommandText = "select count(position) from container where yardnum='" + yardid + "' and col='"+col+"' and rowid='"+row+"'";

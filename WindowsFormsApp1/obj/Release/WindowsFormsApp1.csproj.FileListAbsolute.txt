@@ -16,11 +16,6 @@ C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\WindowsFo
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\EntityFramework.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\EntityFramework.SqlServerCompact.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\ISqlCeScripting.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\QuickGraph.Data.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\QuickGraph.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\QuickGraph.Graphviz.dll
-C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\SqlCeScripting40.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\System.Data.SqlServerCe.dll
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\EntityFramework.xml
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\EntityFramework.SqlServer.xml
@@ -40,3 +35,5 @@ C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\obj\Release\WindowsFo
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
 C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\EPPlus.dll
+C:\Users\nikhil\Documents\github\ymanager\WindowsFormsApp1\bin\Release\EPPlus.xml

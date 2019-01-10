@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
             }
             try
             {
-                SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+                SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "select containerid,yardnum,col,rowid,position from container where containerid='"+s+"'";
@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
 
         private DataSet GetData()
         {
-            SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+            SqlCeConnection conn = new SqlCeConnection("Data Source=D:\\containerinfo.sdf;Persist Security Info=False;");
             conn.Open();
             DataSet ds = new DataSet("Containers");
             SqlCeCommand cmd = conn.CreateCommand();
@@ -100,10 +100,7 @@ namespace WindowsFormsApp1
                 DataTable dt = new DataTable(yardid.ToString());
                 cmd.CommandText = "select * from container where yardnum='" + yardid + "'";
                 SqlCeDataReader rd = cmd.ExecuteReader();
-                if(rd.Read())
-                {
-                    dt.Load(rd);
-                }
+                dt.Load(rd);
                 ds.Tables.Add(dt);
             }
             conn.Close();
@@ -123,7 +120,7 @@ namespace WindowsFormsApp1
                             foreach (DataTable dt in ds.Tables)
                             {
                                 ExcelWorksheet ws = xp.Workbook.Worksheets.Add(dt.TableName);
-
+                                xp.Compatibility.IsWorksheets1Based=true;
                                 int rowstart = 2;
                                 int colstart = 2;
                                 int rowend = rowstart;
