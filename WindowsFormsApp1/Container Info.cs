@@ -89,14 +89,26 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            bool flag = true;
             try
             {
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "delete from container where containerid='"+textBox1.Text+"'";
-                cmd.ExecuteNonQuery();
-                label14.Text = "Container deleted successfully!";
+                cmd.CommandText = "select count(position) from container where containerid='" + textBox1.Text + "'";
+                SqlCeDataReader rd = cmd.ExecuteReader();
+                if (rd.Read())
+                {
+                    if ((int)rd[0] == 0)
+                        MessageBox.Show("Container does not exist");
+                    flag = false;
+                }
+                if (flag)
+                {
+                    cmd.CommandText = "delete from container where containerid='" + textBox1.Text + "'";
+                    cmd.ExecuteNonQuery();
+                    label14.Text = "Container deleted successfully!";
+                }
 
                 cmd.CommandText = "select * from container where yardnum='" + yardid + "' and col='" + col + "' and rowid='" + row + "'";
                 cmd.ExecuteNonQuery();
@@ -128,7 +140,7 @@ namespace WindowsFormsApp1
                     flag = false;
                 }
 
-                if (flag == true)
+                if (flag)
                 {
                     cmd.CommandText = "update container set containerid='" + textBox1.Text + "', yardnum='" + yardid.ToString() + "', vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "', col='" + col + "', rowid='" + row.ToString() + "' ";
                     cmd.ExecuteNonQuery();
