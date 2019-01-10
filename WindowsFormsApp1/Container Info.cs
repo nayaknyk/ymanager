@@ -63,10 +63,9 @@ namespace WindowsFormsApp1
         {                
             try
             {
-                int position=0;
-                while(position==0)
-                { position = getpos(yardid); }
-
+                int position = getpos(yardid);
+                if (position == 0)
+                    return;
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
@@ -152,7 +151,7 @@ namespace WindowsFormsApp1
 
         private int getpos(int yardid)
         {
-            int position, max, count;
+            int position=0, max, count;
             if (yardid == 2 || yardid == 3 || yardid == 4 || yardid == 6)
                 max = 3;
             else max = 4;
@@ -162,16 +161,20 @@ namespace WindowsFormsApp1
             SqlCeCommand cmd = conn.CreateCommand();
             cmd.CommandText = "select count(*) from container where yardnum='" + yardid + "' and col='"+col+"' and rowid='"+row+"'";
             SqlCeDataReader rd = cmd.ExecuteReader();
-            count = (int)rd[0];
-            conn.Close();
-            if (count < max)
-                position = count++;
-            else
+            while (rd.Read())
             {
-                MessageBox.Show("Cannot stack more containers, please place container in another slot");
-                position = 0;
-            }
+                count = (int)rd[0];
+                conn.Close();
+
+                if (count < max)
+                    position = count++;
+                else
+                {
+                    MessageBox.Show("Cannot stack more containers, please place container in another slot");
+                }
                 return position;
+            }
+            return position;
         }
     }
 }
