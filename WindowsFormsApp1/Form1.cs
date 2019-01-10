@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlServerCe;
+using OfficeOpenXml;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -75,6 +77,95 @@ namespace WindowsFormsApp1
                 sd.Fill(dt);
                 dataGridView1.DataSource = dt;
                 conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            createExcel();
+        }
+
+        private DataSet GetData()
+        {
+            SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
+            conn.Open();
+            DataSet ds = new DataSet("Containers");
+            SqlCeCommand cmd = conn.CreateCommand();
+            for (int yardid = 1; yardid <= 6; yardid++)
+            {
+                DataTable dt = new DataTable(yardid.ToString());
+                cmd.CommandText = "select * from container where yardnum='" + yardid + "'";
+                SqlCeDataReader rd = cmd.ExecuteReader();
+                if(rd.Read())
+                {
+                    dt.Load(rd);
+                }
+                ds.Tables.Add(dt);
+            }
+            conn.Close();
+            return ds;
+        }
+
+        private void createExcel()
+        {
+            try
+            {
+                using (DataSet ds = GetData())
+                {
+                    if (ds != null && ds.Tables.Count > 0)
+                    {
+                        using (ExcelPackage xp = new ExcelPackage())
+                        {
+                            foreach (DataTable dt in ds.Tables)
+                            {
+                                ExcelWorksheet ws = xp.Workbook.Worksheets.Add(dt.TableName);
+
+                                int rowstart = 2;
+                                int colstart = 2;
+                                int rowend = rowstart;
+                                int colend = colstart + dt.Columns.Count;
+
+                                ws.Cells[rowstart, colstart, rowend, colend].Merge = true;
+                                ws.Cells[rowstart, colstart, rowend, colend].Value = dt.TableName;
+                                ws.Cells[rowstart, colstart, rowend, colend].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                                ws.Cells[rowstart, colstart, rowend, colend].Style.Font.Bold = true;
+                                ws.Cells[rowstart, colstart, rowend, colend].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                                ws.Cells[rowstart, colstart, rowend, colend].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGray);
+
+                                rowstart += 2;
+                                rowend = rowstart + dt.Rows.Count;
+                                ws.Cells[rowstart, colstart].LoadFromDataTable(dt, true);
+                                int i = 1;
+                                foreach (DataColumn dc in dt.Columns)
+                                {
+                                    i++;
+                                    if (dc.DataType == typeof(decimal))
+                                        ws.Column(i).Style.Numberformat.Format = "#0.00";
+                                }
+                                ws.Cells[ws.Dimension.Address].AutoFitColumns();
+
+
+
+                                ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Top.Style =
+                                   ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Bottom.Style =
+                                   ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Left.Style =
+                                   ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+
+                            }
+                            using (FileStream aFile = new FileStream(@"D:\container.xlsx", FileMode.Create))
+                            {
+                                aFile.Seek(0, SeekOrigin.Begin);
+                                xp.SaveAs(aFile);
+                                aFile.Close();
+                            }
+                        }
+                    }
+                }
+                MessageBox.Show("Report saved successfully!");
             }
             catch(Exception ex)
             {

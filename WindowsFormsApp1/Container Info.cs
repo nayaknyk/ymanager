@@ -66,6 +66,7 @@ namespace WindowsFormsApp1
                 int position = getpos(yardid);
                 if (position == 0)
                     return;
+
                 SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
                 conn.Open();
                 SqlCeCommand cmd = conn.CreateCommand();
@@ -100,8 +101,10 @@ namespace WindowsFormsApp1
                 if (rd.Read())
                 {
                     if ((int)rd[0] == 0)
+                    {
                         MessageBox.Show("Container does not exist");
-                    flag = false;
+                        flag = false;
+                    }
                 }
                 if (flag)
                 {
@@ -135,14 +138,16 @@ namespace WindowsFormsApp1
                 cmd.CommandText = "select count(position) from container where containerid='" + textBox1.Text + "'";
                 SqlCeDataReader rd = cmd.ExecuteReader();
                 if(rd.Read())
-                { if ((int)rd[0]==0)
-                    MessageBox.Show("Container does not exist");
-                    flag = false;
+                { if ((int)rd[0] == 0)
+                    {
+                        MessageBox.Show("Container does not exist");
+                        flag = false;
+                    }
                 }
 
                 if (flag)
                 {
-                    cmd.CommandText = "update container set containerid='" + textBox1.Text + "', yardnum='" + yardid.ToString() + "', vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "', col='" + col + "', rowid='" + row.ToString() + "' ";
+                    cmd.CommandText = "update container set vesselnum='" + textBox3.Text + "', voyagenum='" + textBox4.Text + "', containersize='" + textBox6.Text + "', agent='" + textBox2.Text + "', containertype='" + textBox5.Text + "' where containerid='"+textBox1.Text+"'";
                     cmd.ExecuteNonQuery();
                     label14.Text = "Stack updated successfully!";
 
@@ -171,15 +176,15 @@ namespace WindowsFormsApp1
             SqlCeConnection conn = new SqlCeConnection("Data Source=C:\\Users\\nikhil\\Documents\\github\\ymanager\\WindowsFormsApp1\\bin\\Debug\\containerinfo.sdf;Persist Security Info=False;");
             conn.Open();
             SqlCeCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "select count(*) from container where yardnum='" + yardid + "' and col='"+col+"' and rowid='"+row+"'";
+            cmd.CommandText = "select count(position) from container where yardnum='" + yardid + "' and col='"+col+"' and rowid='"+row+"'";
             SqlCeDataReader rd = cmd.ExecuteReader();
-            while (rd.Read())
+            if (rd.Read())
             {
                 count = (int)rd[0];
                 conn.Close();
 
                 if (count < max)
-                    position = count++;
+                    position = count+1;
                 else
                 {
                     MessageBox.Show("Cannot stack more containers, please place container in another slot");
